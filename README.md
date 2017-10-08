@@ -6,4 +6,4 @@ _Virtual list component for [Prum](https://github.com/roman01la/prum)_
 
 ## Usage
 
-See example source code
+See [live demo](https://roman01la.github.io/virtual.list/) & example source code
