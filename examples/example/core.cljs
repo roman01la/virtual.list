@@ -8,6 +8,7 @@
   [:div {:style {:background-color color
                  :color            "#fff"
                  :width            42
+                 :min-width        42
                  :height           42
                  :border-radius    "50%"
                  :box-sizing       "border-box"
@@ -45,9 +46,8 @@
                                             :padding       "0 4px"}}
                               (Avatar (inc n) color)
                               [:div {} "Lorem Ipsum is simply dummy text of the printing and typesetting industry"]])))]
-    [:div {:style {:width  620
-                   :margin "0 auto"
-                   :font   "normal 16px sans-serif"}}
+    [:div {:style {:width "100%"
+                   :font  "normal 16px sans-serif"}}
      [:div {:style {:display         "flex"
                     :justify-content "space-around"
                     :padding         8}}
