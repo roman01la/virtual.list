@@ -1,4 +1,4 @@
-(defproject org.roman01la/virtual.list "0.1.1"
+(defproject org.roman01la/virtual.list "0.1.2"
   :description "Virtual list component for Prum"
   :url "https://github.com/roman01la/virtual-list"
   :license {:name "Eclipse Public License"
