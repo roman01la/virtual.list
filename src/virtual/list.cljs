@@ -2,22 +2,23 @@
   (:require [rum.core :as rum]
             [goog.object :as gobj]))
 
+(def id* (atom nil))
+
 (defn- handle-id [state timeout]
-  (when-let [id (:id @state)]
+  (when-let [id @id*]
     (js/clearTimeout id))
-  (swap! state assoc :id
-         (js/setTimeout
-           #(do
-              (swap! state assoc :id nil)
-              (swap! state assoc :scrolling? false))
-           timeout)))
+  (reset! id*
+          (js/setTimeout
+            #(do
+               (reset! id* nil)
+               (swap! state assoc :scrolling? false))
+            timeout)))
 
 (rum/defcs v-list <
   rum/static
   (rum/local
     {:offset     0
-     :scrolling? false
-     :id         nil}
+     :scrolling? false}
     ::state)
   [{state ::state :as st}
    {:keys [rows-count
